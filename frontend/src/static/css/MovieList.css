@@ -1,0 +1,110 @@
+/* MovieList styles */
+.movie-list {
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-left:4vw;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Default layout for large screens */
+  gap: 20px;
+  padding: 10px;
+  height:45vh;
+}
+
+/* Card styles */
+.movie-card {
+  background-color: #fff;
+  border-radius: 8px;
+  height:30vh;
+  width:10vw;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.movie-title {
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.movie-description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive Styles */
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .movies-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .movie-poster {
+    height: 250px;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 768px) {
+  .movies-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .movie-poster {
+    height: 200px;
+  }
+
+  .movie-description {
+    height: auto;
+  }
+}
+
+/* Extra small screens (mobile phones) */
+@media (max-width: 480px) {
+  .movies-container {
+    grid-template-columns: 1fr; /* One card per row */
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .movie-card {
+    padding: 10px;
+  }
+
+  .movie-poster {
+    height: 180px;
+  }
+}

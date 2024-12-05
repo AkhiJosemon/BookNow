@@ -1,0 +1,49 @@
+.ticket-list-page {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .ticket-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .ticket-card {
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: left;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .ticket-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .ticket-card h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .ticket-card p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .no-tickets-message {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+  }
+  

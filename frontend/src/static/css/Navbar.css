@@ -1,0 +1,149 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0e2938;
+  color: white;
+  position: sticky; /* Keeps the navbar at the top when scrolling */
+  top: 0; /* Makes it stick at the very top */
+  padding: 10px 20px;
+  box-sizing: border-box; /* Includes padding in height/width calculations */
+  z-index: 00;
+  width: 100%; /* Full width of the viewport */
+}
+
+/* Left side of the navbar (filter button) */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Filter Button */
+.filter-btn {
+  padding: 10px 15px;
+  background-color: #ff5722;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.filter-btn:hover {
+  background-color: #e64a19;
+}
+
+/* Dropdown for filter options */
+.filter-dropdown {
+  position: absolute;
+  top: 40px; /* Space below the button */
+  left: 0;
+  background-color: white;
+  color: #333;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it's above other content */
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-dropdown p {
+  padding: 8px 10px;
+  margin: 0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filter-dropdown p:hover {
+  background-color: #f1f1f1;
+}
+
+/* Centered title */
+.navbar-center {
+  flex: 1;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Right side of the navbar (account icon) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Account Icon */
+.account-icon {
+  cursor: pointer;
+  font-size: 24px; /* Adjust icon size */
+  padding-right: 10px;
+  transition: transform 0.2s ease;
+}
+
+.account-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap; /* Allow wrapping for small screens */
+    justify-content: center; /* Center align items */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .navbar-left,
+  .navbar-right {
+    flex: 1;
+    justify-content: center;
+    margin-bottom: 10px; /* Add space between rows */
+  }
+
+  .navbar-center {
+    flex-basis: 100%; /* Take full width */
+    margin-bottom: 10px;
+  }
+
+  .filter-btn {
+    font-size: 14px; /* Reduce font size */
+    padding: 8px 12px; /* Adjust padding */
+  }
+
+  .filter-dropdown p {
+    font-size: 12px; /* Smaller text for dropdown options */
+  }
+
+  .account-icon {
+    font-size: 20px; /* Reduce icon size */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 5px; /* Further reduce padding for very small screens */
+  }
+
+  .filter-btn {
+    font-size: 12px; /* Smaller font for tiny screens */
+    padding: 5px 8px;
+  }
+
+  .navbar-center {
+    font-size: 20px; /* Adjust title font size */
+  }
+
+  .filter-dropdown p {
+    font-size: 10px; /* Smaller text for dropdown options */
+  }
+
+  .account-icon {
+    font-size: 18px;
+  }
+}

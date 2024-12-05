@@ -1,0 +1,12 @@
+.layout-container {
+    margin: 0; /* Remove any potential margin */
+    padding: 0; /* Remove any padding */
+    position: relative; /* Ensure it starts from the very top */
+    top: 0; /* Explicitly set the top position */
+    left: 0; /* Explicitly set the left position */
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+  }
+  
